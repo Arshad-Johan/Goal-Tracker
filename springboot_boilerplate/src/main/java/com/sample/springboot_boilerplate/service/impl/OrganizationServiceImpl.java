@@ -37,7 +37,6 @@ public class OrganizationServiceImpl implements OrganizationService {
 
     @Override
     public OrganizationDTO getOrganizationById(Integer id) {
-        // Throw exception if the organization is not found
         Organization organization = organizationRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Organization not found with ID: " + id));
 

@@ -14,7 +14,7 @@ public class OrgHandler {
     private EntityManager entityManager;
 
     @SuppressWarnings("unchecked")
-    public List<Object[]> listAllOrgs() {
+    public List<Object[]>getAllOrganizations() {
         StringBuilder query = new StringBuilder();
         query.append("select * from t_organization ");
 

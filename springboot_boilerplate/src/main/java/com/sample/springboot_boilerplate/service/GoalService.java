@@ -4,6 +4,6 @@ import java.util.List;
 
 public interface GoalService {
     List<GoalDTO> getAllGoals();
-    GoalDTO getGoalById(Integer id);
+    List<GoalDTO> getGoalById(Integer id);
 }
 
