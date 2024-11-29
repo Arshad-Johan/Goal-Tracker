@@ -21,13 +21,4 @@ public class OrgHandler {
         Query nativeQuery = entityManager.createNativeQuery(query.toString());
         return nativeQuery.getResultList();
     }
-
-    @SuppressWarnings("unchecked")
-    public List<Object[]> getProductList(Integer id) {
-        StringBuilder query = new StringBuilder();
-        query.append("select id, product_name from t_product where org_id = :id ");
-
-        Query nativeQuery = entityManager.createNativeQuery(query.toString());
-        return nativeQuery.setParameter("id", id).getResultList();
-    }
 }
