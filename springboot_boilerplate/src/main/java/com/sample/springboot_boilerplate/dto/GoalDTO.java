@@ -1,5 +1,7 @@
 package com.sample.springboot_boilerplate.dto;
 
+import java.time.LocalDate;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,16 +12,16 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class GoalDTO {
     private Integer gid;
-    private String goal_title;
-    private String goal_desc;
-    private Integer assigned_to;
-    private Integer created_by;
-    private String goal_start_date;
-    private String goal_end_date;
-    private String goal_created_date;
-    private String goal_updated_date;
-    private String goal_type;
-    private String goal_status;
-    private Integer goal_priority;
-    private String goal_ref;
+    private String goalTitle;
+    private String goalDesc;
+    private Integer assignedTo;  // ID of the assigned user
+    private Integer createdBy;   // ID of the user who created the goal
+    private LocalDate goalStartDate;
+    private LocalDate goalEndDate;
+    private LocalDate goalCreatedDate;
+    private LocalDate goalUpdatedDate;
+    private String goalType;
+    private String goalStatus;
+    private Integer goalPriority;
+    private String goalRef;
 }

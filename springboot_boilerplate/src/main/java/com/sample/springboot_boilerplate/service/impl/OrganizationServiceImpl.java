@@ -1,6 +1,5 @@
 package com.sample.springboot_boilerplate.service.impl;
 
-import com.sample.springboot_boilerplate.Db.OrgHandler;
 import com.sample.springboot_boilerplate.dto.OrganizationDTO;
 import com.sample.springboot_boilerplate.entity.Organization;
 import com.sample.springboot_boilerplate.exception.ResourceNotFoundException;
@@ -9,9 +8,7 @@ import com.sample.springboot_boilerplate.repository.OrganizationRepository;
 import com.sample.springboot_boilerplate.service.OrganizationService;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Service
@@ -19,12 +16,10 @@ public class OrganizationServiceImpl implements OrganizationService {
 
     private final OrganizationRepository organizationRepository;
     private final OrganizationMapper organizationMapper;
-    private final OrgHandler orgHandler;
 
-    public OrganizationServiceImpl(OrganizationRepository organizationRepository, OrganizationMapper organizationMapper, OrgHandler orgHandler) {
+    public OrganizationServiceImpl(OrganizationRepository organizationRepository, OrganizationMapper organizationMapper) {
         this.organizationRepository = organizationRepository;
         this.organizationMapper = organizationMapper;
-        this.orgHandler = orgHandler;
     }
 
     @Override
